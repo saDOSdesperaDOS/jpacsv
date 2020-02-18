@@ -9,9 +9,12 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TablePartsCrossReference_NOT_OE_27")
-@NamedQuery(name = "TablePartsCrossReference_NOT_OE_27.getAll", query = "SELECT c FROM TablePartsCrossReference_NOT_OE_27 c")
-public class TablePartsCrossReference_NOT_OE_27 implements Serializable {
+@Table(name="TablePartsCrossReference_NOT_OE_1")
+@NamedQuery(name = "TablePartsCrossReference_NOT_OE_1.getAll", query = "SELECT c FROM TablePartsCrossReference_NOT_OE_1 c")
+public class TablePartsCrossReference_NOT_OE_1 implements Serializable {
+	/**
+	 * 
+	 */
 	@Id
 	private int id;
 	@Column(name = "NAME_PARTS")
@@ -28,6 +31,7 @@ public class TablePartsCrossReference_NOT_OE_27 implements Serializable {
 	private String code_parts;
 	@Column(name="CODE_PARTS_ADVANCED")
 	private String code_parts_advanced;
+	
 	public int getId() {
 		return id;
 	}
@@ -99,7 +103,7 @@ public class TablePartsCrossReference_NOT_OE_27 implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TablePartsCrossReference_NOT_OE_27 other = (TablePartsCrossReference_NOT_OE_27) obj;
+		TablePartsCrossReference_NOT_OE_1 other = (TablePartsCrossReference_NOT_OE_1) obj;
 		if (brands == null) {
 			if (other.brands != null)
 				return false;

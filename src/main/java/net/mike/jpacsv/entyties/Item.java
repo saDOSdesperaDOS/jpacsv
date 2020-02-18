@@ -73,6 +73,9 @@ public class Item {
 		this.code_parts_advanced = code_parts_advanced;
 	}
 	
+	public Item() {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
