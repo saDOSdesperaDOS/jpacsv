@@ -17,7 +17,7 @@ public class ServiceTablePartsCrossReference_NOT_OE_1 {
 	public List getAll() {
 		List result = new ArrayList();
 		try {
-			Query query = em.createNativeQuery("SELECT * FROM CSVREAD('d:\\temp\\schemas\\schema-crosses\\TablePartsCrossReference_NOT_OE_1.csv')");
+			Query query = em.createNativeQuery("SELECT * FROM CSVREAD('C:\\Users\\snake2\\temp\\TablePartsCrossReference_NOT_OE_1.csv')");
 			//query.setParameter(1, "%ID%");
 			result =  query.getResultList();
 		} catch (Exception e) {
@@ -27,7 +27,7 @@ public class ServiceTablePartsCrossReference_NOT_OE_1 {
 	}
 	public TablePartsCrossReference_NOT_OE_1 find(String CODE_PARTS) {
 		em.getTransaction().begin();
-		Query query = em.createNativeQuery("SELECT e FROM CSVREAD('d:\\temp\\schemas\\schema-crosses\\TablePartsCrossReference_NOT_OE_1.csv') WHERE e.code_parts=:CODE_PARTS");
+		Query query = em.createNativeQuery("SELECT e FROM CSVREAD('C:\\Users\\snake2\\temp\\TablePartsCrossReference_NOT_OE_1.csv') WHERE e.code_parts=:CODE_PARTS");
 		query.setParameter(6, CODE_PARTS);
 		TablePartsCrossReference_NOT_OE_1 tablePartsCrossReference_NOT_OE_1 = (TablePartsCrossReference_NOT_OE_1) query.getSingleResult();
 		em.getTransaction().commit();
